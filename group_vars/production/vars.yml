@@ -1,0 +1,17 @@
+### Production Environment Settings ###
+
+# STS Role and target account
+Sts.Role: arn:aws:iam::305261792510:role/admin
+
+# Network settings
+Stack.Inputs.VpcName: Default
+
+# Application settings
+Stack.Inputs.ApplicationDesiredCount: 2
+Stack.Inputs.ApplicationImageId: ami-2ac7f74f
+Stack.Inputs.ApplicationInstanceType: t2.micro
+Stack.Inputs.KeyName: platime
+
+# Proxy Settings
+Stack.Inputs.ProxyImage: 305261792510.dkr.ecr.us-east-2.amazonaws.com/dockerproductionaws/squid
+Stack.Inputs.ProxyWhitelist: .dockerproductionaws.org

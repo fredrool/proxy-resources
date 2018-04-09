@@ -1,0 +1,11 @@
+---
+# Add global settings here
+
+# aws-cloudformation role settings
+Stack.Name: proxy-resources
+Stack.Template: templates/proxy.yml.j2
+
+# Global Inputs
+Stack.Inputs:
+  ApplicationDesiredCount: 1
+  ProxyImageTag: latest
